@@ -1,5 +1,5 @@
 # hadoopTrial
-* on centos 7
+* on centos 6
 
 ## java install##
 * https://github.com/draculavlad/JavaDevEnv
@@ -12,18 +12,32 @@ export PATH=$PATH:$JAVA_HOME/bin
 export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
 ```
 
-## master node##
+## preparement##
+* shutdown selinux:
 ```shell
-groupadd hadoop
-useradd -g hadoop hdfs
-su hdfs
-ssh-keygen -t rsa
-cd /home/hdfs/.ssh/ && cat id_rsa.pub > ./authorized_keys
-exit
+setenforce 0
 ```
-* go to http://www.apache.org/dyn/closer.cgi/hadoop/common/ find a downloadable link
-```
-cd /opt && wget http://mirror.olnevhost.net/pub/apache/hadoop/common/stable2/hadoop-2.7.1.tar.gz
-
+or
+```shell
+setenforce Permissive
 ```
 
+* shutdown iptable
+```shell
+service iptables stop
+```
+
+##  install & start ambari##
+* import packages
+```shell
+cd /etc/yum.repos.d/ && wget http://public-repo-1.hortonworks.com/ambari/centos6/1.x/updates/1.7.0/ambari.repo
+```
+* install
+```shell
+yum install ambari-server
+ambari-server setup
+```
+* start
+```shell
+ambari-server start
+```
