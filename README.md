@@ -29,7 +29,8 @@ ambari-server setup
 * littile fix 
 * References: http://zorro.blog.51cto.com/2139862/1409468
 * vi /usr/lib/python2.6/site-packages/ambari_server/setupAgent.py
-* set hostname = yourhost
+* set hostname = $yourhost
+* set server_port=8440
 
 * start
 ```shell
