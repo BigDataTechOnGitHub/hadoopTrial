@@ -1,17 +1,6 @@
 # hadoopTrial
 * on centos 6
 
-## java install##
-* https://github.com/draculavlad/JavaDevEnv
-
-## /etc/profile##
-```
-export JAVA_HOME=/usr/java/jdk1.7.0_55
-export JRE_HOME=$JAVA_HOME/jre
-export PATH=$PATH:$JAVA_HOME/bin
-export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
-```
-
 ## preparement##
 * shutdown selinux:
 ```shell
