@@ -37,6 +37,11 @@ cd /etc/yum.repos.d/ && wget http://public-repo-1.hortonworks.com/ambari/centos6
 yum install ambari-server
 ambari-server setup
 ```
+* littile fix 
+* References: http://zorro.blog.51cto.com/2139862/1409468
+* vi /usr/lib/python2.6/site-packages/ambari_server/setupAgent.py
+* set hostname = yourhost
+
 * start
 ```shell
 ambari-server start
