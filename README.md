@@ -1,7 +1,10 @@
 # hadoopTrial
-* on centos 6
+* on centos 6 & vmware env
 
 ## preparement##
+* clone vm
+(setup vmware network)[https://github.com/draculavlad/VmwareVMNetCfgISSUEAfterClone]
+
 * shutdown selinux:
 ```shell
 setenforce 0
@@ -10,11 +13,18 @@ or
 ```shell
 setenforce Permissive
 ```
+* recommend modify /etc/selinux/config set selinux from enforce to permissive
 
 * shutdown iptable
 ```shell
 service iptables stop
+chkconfig iptables off
+reboot
 ```
+
+## setup network##
+* (setup dns server and hostname)[https://github.com/draculavlad/DNS_IN_LAN]
+
 
 ##  install & start ambari##
 * import packages
