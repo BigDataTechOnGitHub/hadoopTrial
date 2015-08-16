@@ -1,4 +1,4 @@
-# hadoopTrial
+# hadoopTrial for 1.x
 * CentOS 6.6 x64
 * JDK：1.7.0_55 64位
 * Hadoop：1.1.2
