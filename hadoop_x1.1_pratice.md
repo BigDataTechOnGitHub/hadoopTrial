@@ -152,6 +152,6 @@ cd ${PATH_TO_YOUR_HADOOP_DIR}/bin && ./start-all.sh
 ```
 
 ## using jps to verify hadoop statis##
-```
+```shell
 jps
 ```
